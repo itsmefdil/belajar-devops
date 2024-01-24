@@ -9,6 +9,13 @@ services:
     ports:
       - 127.0.0.1:3000:3000
 
+  install:
+    image: node:18.17.0
+    working_dir: /app
+    command: npm install
+    volumes:
+      - ./:/app
+
   build:
     image: node:18.17.0
     working_dir: /app

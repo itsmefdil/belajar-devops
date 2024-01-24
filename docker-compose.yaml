@@ -1,0 +1,17 @@
+version: "3"
+services:
+  run:
+    image: node:18.17.0
+    working_dir: /app
+    command: npm start
+    volumes:
+      - ./:/app
+    ports:
+      - 127.0.0.1:3000:3000
+
+  build:
+    image: node:18.17.0
+    working_dir: /app
+    command: npm run build
+    volumes:
+      - ./:/app

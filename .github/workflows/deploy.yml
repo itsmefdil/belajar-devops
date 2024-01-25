@@ -22,12 +22,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Installs project dependencies using pip
-      - name: Install Curl
-        run: |
-          sudo apt update
-          sudo apt install curl
-
       # Runs a Deploy project
       - name: Deploy Project !
         run: |

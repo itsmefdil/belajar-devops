@@ -4,15 +4,11 @@ name: Deploy Project
 
 # Controls when the workflow will run
 on:
-  # branch name
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [production]
-    # Allows you to run this workflow manually from the Actions tab
-
-  workflow_run:
-    workflows: ["Unit Test"] # Replace with the name of your CI workflow
-    types:
-      - completed
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
